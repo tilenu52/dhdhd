@@ -13,16 +13,4 @@ def guess_number():
             attempts += 1
             
             if user_guess < number:
-                print("Маловато, попробуй ещё раз.")
-            elif user_guess > number:
-                print("Много, попробуй ещё раз.")
-            else:
-                print(f"Правильно! Ты отгадал число {number} за {attempts} попыток.")
-                break
-                
-        except ValueError:
-            print("Это должно быть целое число.")
-
-
-guess_number( )
 
