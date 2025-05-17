@@ -1,1 +1,28 @@
-kg
+import random
+
+def guess_number():
+   
+    number = random.randint(1, 100)
+    
+    attempts = 0
+    print("Я загадал число от 1 до 100.")
+    
+    while True:
+        try:
+            user_guess = int(input("Введи своё предположение: "))
+            attempts += 1
+            
+            if user_guess < number:
+                print("Маловато, попробуй ещё раз.")
+            elif user_guess > number:
+                print("Много, попробуй ещё раз.")
+            else:
+                print(f"Правильно! Ты отгадал число {number} за {attempts} попыток.")
+                break
+                
+        except ValueError:
+            print("Это должно быть целое число.")
+
+
+guess_number()
+
